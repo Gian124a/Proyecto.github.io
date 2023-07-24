@@ -1,0 +1,395 @@
+:root{
+    --colorGris: #A19199;
+    --ColorGrisClaro: #F0F0F0;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    background-image: url(fondochampions.jpg);
+    background-position: center;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    font-family: 'Victor Mono', monospace;
+    font-size: 13px;
+    color: #000000;
+}
+.Header-Superior{
+    background: linear-gradient(to right, var(--colorGris), var(--ColorGrisClaro));
+    height: 25px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+.Contenedor-Titulo-Principal{
+    margin-left: 50px;
+    width: 200px;
+    background-color: red;
+}
+.Contenedor-Contacto{
+    margin-left: 400px;
+    background-color: red;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+
+}
+p{
+    font-weight: 600;
+}
+.Lista-Superior{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 130px;
+    height: 25px;
+}
+li{
+    height: 100%;
+}
+span{
+    font-size: 20px;
+}
+header{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    display: flex;
+    background-color: #212121;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 20px;
+    padding-left: 50px;
+    margin-top: 25px;
+    z-index: 10000;
+}
+.Contenedor-Header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    margin-top: 10px;
+    width: 90px;
+}
+nav{
+    width: 700px;
+    height: 100%;
+}
+.lista{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.lista li{
+    position: relative;
+}
+.lista li a{
+    font-weight: 600;
+    color: #FFFFFF;
+    transition: 0.4s;
+}
+.lista li a::after{
+    content: "";
+    background: linear-gradient(to right, #0C1C96, #F01CDA);
+    height: 0;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    bottom: -15px;
+    transition: 0.5s;
+}
+.lista li a:hover::after{
+    height: 4px;
+    bottom: -6px;
+    width: 100%;
+    transition: 0.5s;
+}
+.Boton{
+    color: white;
+    border: 2px solid #FFFFFF;
+    background-color: transparent;
+    border-radius: 10px;
+    width: 90px;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-weight: 600;
+}
+.Boton:hover{
+    background-color: #FFFFFF;
+    color: #000000;
+    transition: 0.5s;
+}
+.Contenedor-Perfil{
+    position: relative;
+    top: 145px;
+    background-color: #FFFFFF;
+    width: 90%;
+    max-width: 745px;
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 10;
+    padding-bottom: 20px;
+}
+.Contenedor-Perfil-Persona{
+    position: relative;
+    width: 90%;
+    max-width: 670px;
+    height: 420px;
+    background-color: #F0F0F0;
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.7);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.editor-Perfil{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130px;
+    height: 40px;
+    z-index: 100;
+}
+.Editor{
+    color: #FFFFFF;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.Editor::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -2px;
+    background: linear-gradient(to right, #000040, #32DFFA);
+    transition: 0.5s;
+}
+.Editor:hover::after{
+    bottom: 2px;
+    width: 83%;
+    height: 4px;
+    transition: 0,5s;
+}
+.Editor:hover{
+    color: #000040;
+    transition: 0.5s;
+}
+.Fondo-Perfil{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 130px;
+    background: linear-gradient(to right, #0C1C96, #F01CDA);
+}
+.Fondo-image{
+    position: absolute;
+    top: 65px;
+    background-color: #FFFFFF;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;  
+}
+.Foto-Perfil{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.Contenedor-Datos{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    border-top: 1px solid #A19199;
+}
+.Contenedor-Datos div{
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Contenedor-Datos div:not(:last-child){
+    border-right: 1px solid #A19199;
+}
+.Contenedor-Datos div:first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Contenedor-Datos div h4{
+    font-family: 'Ubuntu';
+    padding-bottom: 5px;
+    font-size: 18px;
+}
+.Contenedor-MisDatos{
+    position: absolute;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    height: 110px;
+    top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Contenedor-MisDatos .Dato{
+    padding-bottom: 5px;
+}
+.Contenedor-MisDatos .Dato:first-child{
+    font-size: 20px;
+}
+.Contenedor-MisDatos .Dato:not(:last-child){
+    font-family: 'Ubuntu';
+}
+.Contenedor-MisDatos .Dato:last-child{
+    padding-top: 13px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.Redes-Personales{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 50px;
+    padding-left: 10px;
+    width: 130px;
+    height: 40px;
+}
+.Redes-Personales li a{
+    color: #FFFFFF;
+}
+.Contenedor-Perfil-Persona:nth-child(2){
+    margin-top: 30px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.Contenedor-Titulo{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Contenedor-Titulo h2{
+    font-size: 18px;
+    color: #FFFFFF;
+}
+.Datos-Seguridad, .Informacion{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    border-bottom: 1px solid #A19199;
+}
+.Datos-Seguridad label, .Informacion label{
+    padding-right: 10px;
+}
+.Contenedor-Perfil-Persona:nth-child(3){
+    margin-top: 30px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.Contenedor-unico{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.Contenedor-unico a{
+    color: #FFFFFF;
+    transition: 0.5s;
+}
+.Contenedor-unico a:hover{
+    color: #ccc0c6;
+    transition: 0.5s;
+}
+.Contenedor-Perfil-Persona:nth-child(4){
+    margin-top: 30px;
+    height: 300px;
+    background: linear-gradient(to right, #0C1C96, #F01CDA);
+}
+.qr{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 70px auto;
+
+    width: 190px;
+    height: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #A19199;
+}
+.qr img{
+    width: 180px;
+    border-radius: 5px;
+    border: 2pX solid #000000;
+}
+footer{
+    position: absolute;
+    top: calc(100% + 880px);
+    background-color: #212121;
+    width: 100%;
+    height: 300px;
+}
+
+@media (max-width: 900px){
+    .Header-Superior{
+        display: none;
+    }
+
+    header{
+        margin-top: 0;
+    }
+}
